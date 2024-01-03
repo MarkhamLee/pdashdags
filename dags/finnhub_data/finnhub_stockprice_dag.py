@@ -28,7 +28,7 @@ def send_alerts(context: dict):
      on_failure_callback=send_alerts)
 def finnhub_stockprice_dag():
 
-    from dags.finnhub_data.finnhub_utilities import FinnHubUtilities
+    from finnhub_data.finnhub_utilities import FinnHubUtilities
     finn_util = FinnHubUtilities()
 
     @task(retries=0)
